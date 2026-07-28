@@ -1399,266 +1399,1510 @@ Possible concern&hellip;"></textarea>
     <!-- =============================================================
   PANEL 2: The micro:bit V2 as a controller
  ============================================================= -->
-    <!-- ==================== PANEL 2: The micro:bit V2 as a controller ==================== -->
-    <section class="panel" data-panel="2">
-     <span class="eyebrow">
-      Week 1 &middot; Lesson 2
-     </span>
-     <h2>
-      The micro:bit V2 as a controller
-     </h2>
-     <div class="syllabus-link">
-      <strong>
-       NESA syllabus connection
-      </strong>
-      <div class="syllabus-stage">
-       Stage 5 &middot; Building mechatronic and automated systems &middot; Researching and planning
-      </div>
-      <p>
-       &bull; Select and justify control systems, components, microcontrollers and co-processors for a mechatronic or automated system
-      </p>
-     </div>
-     <div class="lesson-meta">
-      <span class="tag">
-       micro:bit V2
-      </span>
-      <span class="tag">
-       Sumo robot project
-      </span>
-     </div>
-     <div class="key-terms">
-      <h3>
-       Key terminology
-      </h3>
-      <dl>
-       <dt>
-        Microcontroller
-       </dt>
-       <dd>
-        A small programmable computer on a single chip that reads inputs, processes data and controls outputs.
-       </dd>
-       <dt>
-        Processor
-       </dt>
-       <dd>
-        The part of a computer that executes instructions and performs calculations.
-       </dd>
-       <dt>
-        Input
-       </dt>
-       <dd>
-        Data or a signal received by a system, usually from a sensor, button or other device.
-       </dd>
-       <dt>
-        Output
-       </dt>
-       <dd>
-        An action, signal or result produced by a system, such as motor movement, light or sound.
-       </dd>
-       <dt>
-        Pin
-       </dt>
-       <dd>
-        A physical connection point used to send or receive electrical signals on a microcontroller.
-       </dd>
-       <dt>
-        Firmware
-       </dt>
-       <dd>
-        Software stored on a device that controls its basic hardware functions.
-       </dd>
-      </dl>
-     </div>
-     <div class="reading">
-      <h3>
-       Read and understand
-      </h3>
-      <p>
-       A microcontroller is a small computer designed to control a device. The micro:bit V2 contains a processor, memory, programmable pins, buttons, sensors, an LED display and communication features.
-      </p>
-      <p>
-       In a robot, the micro:bit receives input data from sensors, processes that data using an algorithm and sends output signals to the Motor:bit board. The Motor:bit then supplies the current required by the two DC motors.
-      </p>
-      <p>
-       The micro:bit cannot safely power the robot motors directly from its pins. The motor driver board forms an interface between the low-power controller and the higher-current motors.
-      </p>
-     </div>
-     <div class="sequence">
-      <div class="step">
-       <h4>
-        Starter
-       </h4>
-       <p>
-        Write one prediction, connection or question about today&rsquo;s topic.
-       </p>
-       <textarea data-save="l2s"></textarea>
-      </div>
-      <div class="step">
-       <h4>
-        Learning activities
-       </h4>
-       <div class="activity-grid">
-        <div class="activity-card">
-         <h4>
-          Activity 1
-         </h4>
-         <p>
-          Label the major parts of the micro:bit V2.
-         </p>
-         <textarea data-save="l2a1" placeholder="Record your response, evidence or test results..."></textarea>
-        </div>
-        <div class="activity-card">
-         <h4>
-          Activity 2
-         </h4>
-         <p>
-          Connect by USB and run a display test.
-         </p>
-         <textarea data-save="l2a2" placeholder="Record your response, evidence or test results..."></textarea>
-        </div>
-        <div class="activity-card">
-         <h4>
-          Activity 3
-         </h4>
-         <p>
-          Explain why a motor driver is required.
-         </p>
-         <textarea data-save="l2a3" placeholder="Record your response, evidence or test results..."></textarea>
-        </div>
-       </div>
-      </div>
-      <div class="code-card">
-       <div class="code-head">
-        <strong>
-         Python tutorial example
-        </strong>
-        <button class="copy-btn" data-copy="c2">
-         Copy code
-        </button>
-       </div>
-       <pre id="c2"><code>from microbit import *
+<!-- =============================================================
+     PANEL 2: The micro:bit V2 as a controller
+============================================================= -->
 
-display.scroll('READY')
-display.show(Image.HAPPY)</code></pre>
-       <p class="code-note">
-        Test in the simulator first. Hardware examples require the correct library, pins and connections.
-       </p>
-      </div>
-      <div class="deep-activity">
-       <h4>
-        Interactive investigation
-       </h4>
-       <p>
-        Apply the lesson concepts before completing your assessment milestone.
-       </p>
-       <div class="interactive-grid">
-        <div class="interactive-card quick-check" data-correct="1">
-         <strong>
-          Quick check
-         </strong>
-         <p>
-          What is the micro:bit's main role in the sumo robot?
-         </p>
-         <select data-save="l2interactiveSelect">
-          <option value="">
-           Choose an answer&hellip;
-          </option>
-          <option value="0">
-           Actuator
-          </option>
-          <option value="1">
-           Controller
-          </option>
-          <option value="2">
-           Power supply
-          </option>
-         </select>
-         <p aria-live="polite" class="feedback">
-         </p>
-        </div>
-        <div class="interactive-card sort-challenge">
-         <strong>
-          Drag-and-drop sequence
-         </strong>
-         <p>
-          Order the path of a sensor signal through the robot.
-         </p>
-         <p class="challenge-note">
-          Drag the steps into the correct order, then check your sequence.
-         </p>
-         <ul class="sort-list" data-save-order="l2sort">
-          <li class="sort-item" data-step="0" draggable="true">
-           Sensor detects a condition
-          </li>
-          <li class="sort-item" data-step="1" draggable="true">
-           Signal reaches an input pin
-          </li>
-          <li class="sort-item" data-step="2" draggable="true">
-           Microcontroller runs the program
-          </li>
-          <li class="sort-item" data-step="3" draggable="true">
-           Motor driver controls the motors
-          </li>
-         </ul>
-         <div class="sort-controls">
-          <button class="mini-btn check-order" type="button">
-           Check order
+<section class="panel" data-panel="2">
+
+  <!-- LESSON HEADING -->
+
+  <span class="eyebrow">
+    Week 1 &middot; Lesson 2
+  </span>
+
+  <h2>
+    The micro:bit V2 as a controller
+  </h2>
+
+
+  <!-- NESA SYLLABUS CONNECTION -->
+
+  <div class="syllabus-link">
+
+    <strong>
+      NESA syllabus connection
+    </strong>
+
+    <div class="syllabus-stage">
+      Stage 5 &middot; Building mechatronic and automated systems
+      &middot; Researching and planning
+    </div>
+
+    <p>
+      &bull; Select and justify control systems, components,
+      microcontrollers and co-processors for a mechatronic or
+      automated system.
+    </p>
+
+  </div>
+
+
+  <!-- LESSON TAGS -->
+
+  <div class="lesson-meta">
+
+    <span class="tag">
+      micro:bit V2
+    </span>
+
+    <span class="tag">
+      Microcontroller
+    </span>
+
+    <span class="tag">
+      Sumo robot project
+    </span>
+
+  </div>
+
+
+  <!-- LEARNING INTENTIONS -->
+
+  <div class="callout">
+
+    <h3>
+      Learning intentions
+    </h3>
+
+    <p>
+      By the end of this lesson, you should be able to:
+    </p>
+
+    <ul>
+      <li>
+        explain the role of a microcontroller in a mechatronic system
+      </li>
+
+      <li>
+        identify the main features of the micro:bit V2
+      </li>
+
+      <li>
+        explain how the micro:bit receives, processes and sends signals
+      </li>
+
+      <li>
+        distinguish between a microcontroller, motor driver and power supply
+      </li>
+
+      <li>
+        justify why the micro:bit V2 is suitable for the sumo robot project
+      </li>
+    </ul>
+
+  </div>
+
+
+  <!-- KEY TERMINOLOGY -->
+
+  <div class="key-terms">
+
+    <h3>
+      Key terminology
+    </h3>
+
+    <dl>
+
+      <dt>
+        Microcontroller
+      </dt>
+
+      <dd>
+        A compact programmable computer contained on a single integrated
+        circuit. It reads inputs, follows programmed instructions and
+        controls outputs.
+      </dd>
+
+
+      <dt>
+        Processor
+      </dt>
+
+      <dd>
+        The part of a computer or microcontroller that executes program
+        instructions, performs calculations and makes logical decisions.
+      </dd>
+
+
+      <dt>
+        Memory
+      </dt>
+
+      <dd>
+        Electronic storage used to hold program instructions and data.
+        The micro:bit uses memory to store its program and temporary values.
+      </dd>
+
+
+      <dt>
+        Input
+      </dt>
+
+      <dd>
+        Data or an electrical signal received by a system from a sensor,
+        button or another device.
+      </dd>
+
+
+      <dt>
+        Output
+      </dt>
+
+      <dd>
+        An action, signal or result produced by a system, such as motor
+        movement, light, sound or transmitted data.
+      </dd>
+
+
+      <dt>
+        Pin
+      </dt>
+
+      <dd>
+        A physical electrical connection point that allows a microcontroller
+        to receive an input signal or send an output signal.
+      </dd>
+
+
+      <dt>
+        Digital signal
+      </dt>
+
+      <dd>
+        A signal with separate states, usually represented as 0 and 1,
+        off and on, or false and true.
+      </dd>
+
+
+      <dt>
+        Analogue signal
+      </dt>
+
+      <dd>
+        A signal that can contain a range of values rather than only an
+        on or off state.
+      </dd>
+
+
+      <dt>
+        Firmware
+      </dt>
+
+      <dd>
+        Software stored on a device that manages its basic hardware
+        functions and allows other programs to communicate with it.
+      </dd>
+
+
+      <dt>
+        Motor driver
+      </dt>
+
+      <dd>
+        An electronic interface that receives low-power control signals
+        from a microcontroller and switches the higher current required
+        by motors.
+      </dd>
+
+
+      <dt>
+        Current
+      </dt>
+
+      <dd>
+        The flow of electrical charge through a circuit. Motors generally
+        require more current than a microcontroller pin can safely provide.
+      </dd>
+
+
+      <dt>
+        Voltage
+      </dt>
+
+      <dd>
+        The electrical potential difference that pushes current through
+        a circuit.
+      </dd>
+
+    </dl>
+
+  </div>
+
+
+  <!-- READING CONTENT -->
+
+  <div class="reading">
+
+    <h3>
+      Read and understand
+    </h3>
+
+    <p>
+      A <strong>microcontroller</strong> is a small programmable computer
+      designed to control an electronic or mechatronic system. Unlike a
+      desktop computer, a microcontroller is normally built into a product
+      and performs a focused set of tasks.
+    </p>
+
+    <p>
+      Examples of products containing microcontrollers include washing
+      machines, microwave ovens, automatic doors, traffic lights, drones,
+      medical devices, security systems and robots.
+    </p>
+
+    <p>
+      The micro:bit V2 acts as the main controller of the sumo robot. It
+      receives electrical signals from sensors, processes those signals
+      using a program and sends control signals to output devices.
+    </p>
+
+    <p>
+      The micro:bit therefore performs the decision-making stage of the
+      robot's input–process–output system.
+    </p>
+
+
+    <h3>
+      Main features of the micro:bit V2
+    </h3>
+
+    <p>
+      The micro:bit V2 includes a range of built-in components that allow
+      it to sense, process, display and communicate information.
+    </p>
+
+    <ul>
+      <li>
+        A processor that executes program instructions
+      </li>
+
+      <li>
+        Memory for storing programs and data
+      </li>
+
+      <li>
+        A 5-by-5 LED display
+      </li>
+
+      <li>
+        Buttons A and B
+      </li>
+
+      <li>
+        Programmable input and output pins
+      </li>
+
+      <li>
+        An accelerometer that detects movement and orientation
+      </li>
+
+      <li>
+        A compass or magnetometer that detects magnetic direction
+      </li>
+
+      <li>
+        A temperature reading from the processor
+      </li>
+
+      <li>
+        A microphone for detecting sound
+      </li>
+
+      <li>
+        A speaker for producing sound
+      </li>
+
+      <li>
+        Radio and Bluetooth communication
+      </li>
+
+      <li>
+        USB connection for programming and power
+      </li>
+    </ul>
+
+
+    <h3>
+      The micro:bit as part of the sumo robot
+    </h3>
+
+    <p>
+      The micro:bit does not work alone. It forms one part of a larger
+      control system.
+    </p>
+
+    <p>
+      Sensors detect information about the robot's environment. For example,
+      a tracking sensor may detect the edge of the arena, while an ultrasonic
+      sensor may measure the distance to an opponent.
+    </p>
+
+    <p>
+      These readings are received through the micro:bit's pins. The processor
+      then runs the programmed algorithm and decides what the robot should do.
+    </p>
+
+    <p>
+      The micro:bit sends low-power control signals to the Motor:bit board.
+      The Motor:bit uses these signals to control the direction and speed of
+      the two DC motors.
+    </p>
+
+
+    <h3>
+      Why the motors need a motor driver
+    </h3>
+
+    <p>
+      The micro:bit's pins are designed to send and receive small electrical
+      signals. They cannot safely provide the amount of current required by
+      a DC motor.
+    </p>
+
+    <p>
+      Connecting motors directly to the micro:bit could cause unreliable
+      operation or damage the microcontroller.
+    </p>
+
+    <p>
+      A motor driver board acts as an interface between the microcontroller
+      and the motors. It receives the micro:bit's control signals while using
+      a separate motor power supply to provide the required current.
+    </p>
+
+    <p>
+      This means the micro:bit makes the decision, but the motor driver
+      performs the electrical switching needed to run the motors.
+    </p>
+
+
+    <h3>
+      Digital and analogue input
+    </h3>
+
+    <p>
+      Some sensors produce a <strong>digital signal</strong>. A digital
+      reading normally represents one of two states, such as:
+    </p>
+
+    <ul>
+      <li>
+        0 or 1
+      </li>
+
+      <li>
+        black or white
+      </li>
+
+      <li>
+        pressed or not pressed
+      </li>
+
+      <li>
+        object detected or not detected
+      </li>
+    </ul>
+
+    <p>
+      Other sensors produce an <strong>analogue signal</strong>. An analogue
+      signal can represent a range of values, such as brightness, sound level
+      or sensor intensity.
+    </p>
+
+    <p>
+      The program must correctly interpret the type of data being received.
+      Incorrect assumptions about the input signal may cause the robot to
+      make unreliable decisions.
+    </p>
+
+
+    <h3>
+      Program execution
+    </h3>
+
+    <p>
+      The micro:bit follows program instructions in a precise order. A
+      typical robot program repeatedly:
+    </p>
+
+    <ol>
+      <li>
+        reads sensor values
+      </li>
+
+      <li>
+        stores the readings in variables
+      </li>
+
+      <li>
+        compares the readings with programmed conditions
+      </li>
+
+      <li>
+        selects an appropriate action
+      </li>
+
+      <li>
+        sends control signals to the motors
+      </li>
+
+      <li>
+        repeats the process
+      </li>
+    </ol>
+
+    <p>
+      This repeated control cycle allows the robot to continually respond
+      to changes in its environment.
+    </p>
+
+  </div>
+
+
+  <!-- SIGNAL FLOW VISUAL -->
+
+  <div class="visual">
+
+    <h3>
+      Visual guide: signal flow through the sumo robot
+    </h3>
+
+    <svg
+      viewBox="0 0 1000 310"
+      role="img"
+      aria-labelledby="signalFlowTitle signalFlowDescription"
+    >
+
+      <title id="signalFlowTitle">
+        Signal flow through a microbit sumo robot
+      </title>
+
+      <desc id="signalFlowDescription">
+        Sensors send signals to the microbit. The microbit processes the
+        data and sends control signals to a motor driver, which powers
+        the motors.
+      </desc>
+
+      <defs>
+
+        <marker
+          id="lesson2Arrow"
+          markerWidth="10"
+          markerHeight="10"
+          refX="9"
+          refY="3"
+          orient="auto"
+        >
+          <path
+            d="M0,0 L0,6 L9,3 z"
+            fill="#607080"
+          />
+        </marker>
+
+      </defs>
+
+
+      <!-- SENSORS -->
+
+      <rect
+        x="25"
+        y="80"
+        width="190"
+        height="125"
+        rx="18"
+        fill="#eaf3fb"
+        stroke="#1f5f99"
+        stroke-width="4"
+      />
+
+      <text
+        x="120"
+        y="120"
+        text-anchor="middle"
+        font-size="27"
+        font-weight="700"
+      >
+        SENSORS
+      </text>
+
+      <text
+        x="120"
+        y="155"
+        text-anchor="middle"
+        font-size="18"
+      >
+        line sensor
+      </text>
+
+      <text
+        x="120"
+        y="180"
+        text-anchor="middle"
+        font-size="18"
+      >
+        ultrasonic sensor
+      </text>
+
+
+      <!-- MICROBIT -->
+
+      <rect
+        x="280"
+        y="65"
+        width="210"
+        height="155"
+        rx="18"
+        fill="#eaf6ee"
+        stroke="#0f6f3d"
+        stroke-width="4"
+      />
+
+      <text
+        x="385"
+        y="110"
+        text-anchor="middle"
+        font-size="27"
+        font-weight="700"
+      >
+        MICRO:BIT
+      </text>
+
+      <text
+        x="385"
+        y="147"
+        text-anchor="middle"
+        font-size="18"
+      >
+        reads inputs
+      </text>
+
+      <text
+        x="385"
+        y="174"
+        text-anchor="middle"
+        font-size="18"
+      >
+        runs the algorithm
+      </text>
+
+      <text
+        x="385"
+        y="201"
+        text-anchor="middle"
+        font-size="18"
+      >
+        sends decisions
+      </text>
+
+
+      <!-- MOTOR DRIVER -->
+
+      <rect
+        x="555"
+        y="80"
+        width="190"
+        height="125"
+        rx="18"
+        fill="#fff6df"
+        stroke="#9a6a00"
+        stroke-width="4"
+      />
+
+      <text
+        x="650"
+        y="120"
+        text-anchor="middle"
+        font-size="25"
+        font-weight="700"
+      >
+        MOTOR DRIVER
+      </text>
+
+      <text
+        x="650"
+        y="155"
+        text-anchor="middle"
+        font-size="18"
+      >
+        switches motor power
+      </text>
+
+      <text
+        x="650"
+        y="180"
+        text-anchor="middle"
+        font-size="18"
+      >
+        controls direction
+      </text>
+
+
+      <!-- MOTORS -->
+
+      <rect
+        x="810"
+        y="80"
+        width="165"
+        height="125"
+        rx="18"
+        fill="#f8e9ec"
+        stroke="#a71930"
+        stroke-width="4"
+      />
+
+      <text
+        x="892"
+        y="120"
+        text-anchor="middle"
+        font-size="27"
+        font-weight="700"
+      >
+        MOTORS
+      </text>
+
+      <text
+        x="892"
+        y="155"
+        text-anchor="middle"
+        font-size="18"
+      >
+        create movement
+      </text>
+
+      <text
+        x="892"
+        y="180"
+        text-anchor="middle"
+        font-size="18"
+      >
+        turn the wheels
+      </text>
+
+
+      <!-- ARROWS -->
+
+      <line
+        x1="215"
+        y1="143"
+        x2="275"
+        y2="143"
+        stroke="#607080"
+        stroke-width="4"
+        marker-end="url(#lesson2Arrow)"
+      />
+
+      <line
+        x1="490"
+        y1="143"
+        x2="550"
+        y2="143"
+        stroke="#607080"
+        stroke-width="4"
+        marker-end="url(#lesson2Arrow)"
+      />
+
+      <line
+        x1="745"
+        y1="143"
+        x2="805"
+        y2="143"
+        stroke="#607080"
+        stroke-width="4"
+        marker-end="url(#lesson2Arrow)"
+      />
+
+
+      <!-- POWER SUPPLY -->
+
+      <rect
+        x="540"
+        y="245"
+        width="220"
+        height="50"
+        rx="14"
+        fill="#f3f4f5"
+        stroke="#607080"
+        stroke-width="3"
+      />
+
+      <text
+        x="650"
+        y="278"
+        text-anchor="middle"
+        font-size="19"
+        font-weight="700"
+      >
+        Separate motor power supply
+      </text>
+
+      <line
+        x1="650"
+        y1="245"
+        x2="650"
+        y2="210"
+        stroke="#607080"
+        stroke-width="4"
+        marker-end="url(#lesson2Arrow)"
+      />
+
+    </svg>
+
+    <p class="caption">
+      The micro:bit makes the decision. The motor driver provides the
+      electrical control needed to operate the motors.
+    </p>
+
+  </div>
+
+
+  <!-- STACKED LEARNING ACTIVITIES -->
+
+  <div class="sequence">
+
+
+    <!-- ACTIVITY 1 -->
+
+    <div class="activity-card">
+
+      <h3>
+        Activity 1: Identify the micro:bit V2 components
+      </h3>
+
+      <p>
+        Examine a physical micro:bit V2 or an image supplied by your teacher.
+        Identify and describe the purpose of each of the following:
+      </p>
+
+      <ul>
+        <li>
+          processor
+        </li>
+
+        <li>
+          LED display
+        </li>
+
+        <li>
+          buttons A and B
+        </li>
+
+        <li>
+          pins 0, 1 and 2
+        </li>
+
+        <li>
+          3V and GND connections
+        </li>
+
+        <li>
+          USB connection
+        </li>
+
+        <li>
+          accelerometer
+        </li>
+
+        <li>
+          microphone
+        </li>
+
+        <li>
+          speaker
+        </li>
+
+        <li>
+          radio communication
+        </li>
+      </ul>
+
+      <p>
+        For each component, classify it as an input, output, processing,
+        storage, communication or power feature.
+      </p>
+
+      <textarea
+        data-save="l2a1"
+        placeholder="Component:
+
+Location:
+
+Purpose:
+
+Classification:
+
+How it may be used in the robot:"
+      ></textarea>
+
+    </div>
+
+
+    <!-- ACTIVITY 2 -->
+
+    <div class="activity-card">
+
+      <h3>
+        Activity 2: Follow a signal through the robot
+      </h3>
+
+      <p>
+        Explain what happens from the moment the tracking sensor detects
+        the edge of the sumo ring until the robot moves away from it.
+      </p>
+
+      <p>
+        Your explanation must include:
+      </p>
+
+      <ol>
+        <li>
+          the sensor detecting the ring edge
+        </li>
+
+        <li>
+          an electrical signal reaching a micro:bit pin
+        </li>
+
+        <li>
+          the program reading the input
+        </li>
+
+        <li>
+          a condition being tested
+        </li>
+
+        <li>
+          the micro:bit selecting an action
+        </li>
+
+        <li>
+          a signal being sent to the Motor:bit
+        </li>
+
+        <li>
+          the motors changing direction
+        </li>
+      </ol>
+
+      <textarea
+        data-save="l2a2"
+        placeholder="Describe the complete signal pathway in sequence..."
+      ></textarea>
+
+    </div>
+
+
+    <!-- ACTIVITY 3 -->
+
+    <div class="activity-card">
+
+      <h3>
+        Activity 3: Test the micro:bit as a controller
+      </h3>
+
+      <p>
+        Connect the micro:bit to the computer using a USB cable and run the
+        following test program.
+      </p>
+
+      <div class="code-card">
+
+        <div class="code-head">
+
+          <strong>
+            Python controller test
+          </strong>
+
+          <button
+            class="copy-btn"
+            data-copy="c2"
+            type="button"
+          >
+            Copy code
           </button>
-          <button class="mini-btn secondary reset-order" type="button">
-           Shuffle
-          </button>
-         </div>
-         <p aria-live="polite" class="feedback order-feedback">
-         </p>
+
         </div>
-       </div>
-       <div class="interactive-card" style="margin-top:14px">
-        <strong>
-         In-depth application
-        </strong>
-        <p>
-         Create an annotated micro:bit diagram identifying processor, pins, buttons, display, radio and sensors. Justify why it is suitable for this project.
+
+        <pre id="c2"><code>from microbit import *
+
+display.scroll("READY")
+display.show(Image.HAPPY)
+
+while True:
+    if button_a.was_pressed():
+        display.show(Image.ARROW_N)
+
+    if button_b.was_pressed():
+        display.show(Image.SQUARE)
+
+    sleep(20)</code></pre>
+
+        <p class="code-note">
+          Test in the simulator first, then download the program to the
+          micro:bit.
         </p>
-        <textarea data-save="l2deep" placeholder="Record your planning, evidence, results and conclusions here..."></textarea>
-       </div>
+
       </div>
-      <div class="step project-milestone">
-       <h4>
-        Assessment milestone 2: Controller research
-       </h4>
-       <p class="deliverable">
-        Document the role of the micro:bit V2 as the controller in your system.
-       </p>
-       <ul>
+
+      <p>
+        Record:
+      </p>
+
+      <ul>
         <li>
-         Identify its inputs, processing role and outputs.
+          what happened when the program started
         </li>
+
         <li>
-         Explain why it is suitable for this robot.
+          what happened when button A was pressed
         </li>
-       </ul>
-       <a class="assessment-link" href="10_ComputingTechnologyA22026.pdf" rel="noopener" target="_blank">
+
+        <li>
+          what happened when button B was pressed
+        </li>
+
+        <li>
+          which parts of the system acted as inputs
+        </li>
+
+        <li>
+          which parts acted as outputs
+        </li>
+
+        <li>
+          what processing decisions occurred
+        </li>
+      </ul>
+
+      <textarea
+        data-save="l2a3"
+        placeholder="Prediction:
+
+Observed behaviour:
+
+Inputs:
+
+Processing:
+
+Outputs:
+
+Errors or problems:
+
+How the test was corrected:"
+      ></textarea>
+
+    </div>
+
+
+    <!-- ACTIVITY 4 -->
+
+    <div class="activity-card">
+
+      <h3>
+        Activity 4: Why is a motor driver required?
+      </h3>
+
+      <p>
+        Compare the role of the micro:bit, Motor:bit board and battery pack.
+      </p>
+
+      <p>
+        Complete the following explanation:
+      </p>
+
+      <ul>
+        <li>
+          The micro:bit is responsible for...
+        </li>
+
+        <li>
+          The Motor:bit board is responsible for...
+        </li>
+
+        <li>
+          The battery pack is responsible for...
+        </li>
+
+        <li>
+          The motors should not be connected directly to the micro:bit
+          because...
+        </li>
+      </ul>
+
+      <p>
+        Include the terms <strong>control signal</strong>,
+        <strong>current</strong>, <strong>motor driver</strong> and
+        <strong>power supply</strong>.
+      </p>
+
+      <textarea
+        data-save="l2a4"
+        placeholder="Explain the role of each component and why the motor driver is required..."
+      ></textarea>
+
+    </div>
+
+
+    <!-- ACTIVITY 5 -->
+
+    <div class="activity-card">
+
+      <h3>
+        Activity 5: Digital and analogue signals
+      </h3>
+
+      <p>
+        Classify each example as digital or analogue:
+      </p>
+
+      <ul>
+        <li>
+          button pressed or not pressed
+        </li>
+
+        <li>
+          line sensor returning 0 or 1
+        </li>
+
+        <li>
+          microphone sound-level reading
+        </li>
+
+        <li>
+          light-intensity reading
+        </li>
+
+        <li>
+          opponent detected or not detected
+        </li>
+
+        <li>
+          motor speed set between 0 and 100
+        </li>
+      </ul>
+
+      <p>
+        Explain why understanding the data type matters when writing the
+        robot program.
+      </p>
+
+      <textarea
+        data-save="l2a5"
+        placeholder="Digital examples:
+
+Analogue examples:
+
+Why the distinction matters:"
+      ></textarea>
+
+    </div>
+
+
+    <!-- INTERACTIVE QUICK CHECK -->
+
+    <div class="deep-activity">
+
+      <h3>
+        Interactive activity 6: Controller knowledge check
+      </h3>
+
+      <div class="interactive-card quick-check" data-correct="1">
+
+        <strong>
+          Question 1
+        </strong>
+
+        <p>
+          What is the micro:bit's main role in the sumo robot?
+        </p>
+
+        <select data-save="l2interactiveSelect">
+
+          <option value="">
+            Choose an answer&hellip;
+          </option>
+
+          <option value="0">
+            Supply all power directly to the motors
+          </option>
+
+          <option value="1">
+            Read inputs, process information and send output signals
+          </option>
+
+          <option value="2">
+            Act as the mechanical chassis
+          </option>
+
+        </select>
+
+        <p
+          class="feedback"
+          aria-live="polite"
+        ></p>
+
+      </div>
+
+
+      <div
+        class="interactive-card quick-check"
+        data-correct="2"
+        style="margin-top: 14px;"
+      >
+
+        <strong>
+          Question 2
+        </strong>
+
+        <p>
+          Why is a motor driver board required?
+        </p>
+
+        <select data-save="l2interactiveSelect2">
+
+          <option value="">
+            Choose an answer&hellip;
+          </option>
+
+          <option value="0">
+            It stores the Python program
+          </option>
+
+          <option value="1">
+            It detects the opponent
+          </option>
+
+          <option value="2">
+            It safely controls the higher current required by the motors
+          </option>
+
+        </select>
+
+        <p
+          class="feedback"
+          aria-live="polite"
+        ></p>
+
+      </div>
+
+    </div>
+
+
+    <!-- DRAG AND DROP -->
+
+    <div class="deep-activity">
+
+      <h3>
+        Interactive activity 7: Order the robot control cycle
+      </h3>
+
+      <p>
+        Drag the steps into the correct order.
+      </p>
+
+      <div class="interactive-card sort-challenge">
+
+        <ul
+          class="sort-list"
+          data-save-order="l2sort"
+        >
+
+          <li
+            class="sort-item"
+            data-step="2"
+            draggable="true"
+          >
+            The program tests a condition
+          </li>
+
+          <li
+            class="sort-item"
+            data-step="0"
+            draggable="true"
+          >
+            A sensor detects information
+          </li>
+
+          <li
+            class="sort-item"
+            data-step="4"
+            draggable="true"
+          >
+            The motor driver switches motor power
+          </li>
+
+          <li
+            class="sort-item"
+            data-step="1"
+            draggable="true"
+          >
+            The signal reaches a micro:bit input pin
+          </li>
+
+          <li
+            class="sort-item"
+            data-step="5"
+            draggable="true"
+          >
+            The motors move the robot
+          </li>
+
+          <li
+            class="sort-item"
+            data-step="3"
+            draggable="true"
+          >
+            The micro:bit sends an output signal
+          </li>
+
+        </ul>
+
+        <div class="sort-controls">
+
+          <button
+            class="mini-btn check-order"
+            type="button"
+          >
+            Check order
+          </button>
+
+          <button
+            class="mini-btn secondary reset-order"
+            type="button"
+          >
+            Shuffle
+          </button>
+
+        </div>
+
+        <p
+          class="feedback order-feedback"
+          aria-live="polite"
+        ></p>
+
+      </div>
+
+    </div>
+
+
+    <!-- DESIGN JUSTIFICATION -->
+
+    <div class="activity-card">
+
+      <h3>
+        Activity 8: Justify the selected controller
+      </h3>
+
+      <p>
+        The syllabus requires you to select and justify a controller for a
+        mechatronic system.
+      </p>
+
+      <p>
+        Evaluate the suitability of the micro:bit V2 for the sumo robot using
+        the following criteria:
+      </p>
+
+      <ul>
+        <li>
+          available inputs and outputs
+        </li>
+
+        <li>
+          compatibility with sensors
+        </li>
+
+        <li>
+          compatibility with the Motor:bit board
+        </li>
+
+        <li>
+          ease of programming
+        </li>
+
+        <li>
+          processing ability
+        </li>
+
+        <li>
+          size and mass
+        </li>
+
+        <li>
+          cost and availability
+        </li>
+
+        <li>
+          suitability for student use
+        </li>
+
+        <li>
+          limitations
+        </li>
+      </ul>
+
+      <p>
+        Finish with a justified conclusion explaining whether the micro:bit
+        V2 is an appropriate controller for this project.
+      </p>
+
+      <textarea
+        data-save="l2deep"
+        placeholder="Advantages:
+
+Limitations:
+
+Evidence:
+
+Justified conclusion:"
+      ></textarea>
+
+    </div>
+
+
+    <!-- CHECK YOUR UNDERSTANDING -->
+
+    <div class="step">
+
+      <h3>
+        Check your understanding
+      </h3>
+
+      <p>
+        Answer each question using complete sentences and appropriate
+        technical terminology.
+      </p>
+
+
+      <h4>
+        1. What is the difference between a microcontroller and a motor driver?
+      </h4>
+
+      <textarea data-save="l2q1"></textarea>
+
+
+      <h4>
+        2. Explain how the micro:bit acts as the process in an
+        input–process–output system.
+      </h4>
+
+      <textarea data-save="l2q2"></textarea>
+
+
+      <h4>
+        3. Why should the motors use a separate power source?
+      </h4>
+
+      <textarea data-save="l2q3"></textarea>
+
+
+      <h4>
+        4. Give one example of a digital input and one example of an
+        analogue input.
+      </h4>
+
+      <textarea data-save="l2q4"></textarea>
+
+
+      <h4>
+        5. Explain why the robot program must repeatedly read its sensors.
+      </h4>
+
+      <textarea data-save="l2q5"></textarea>
+
+    </div>
+
+
+    <!-- ASSESSMENT MILESTONE -->
+
+    <div class="step project-milestone">
+
+      <h3>
+        Assessment milestone 2: Controller research and justification
+      </h3>
+
+      <p class="deliverable">
+        Document and justify the role of the micro:bit V2 as the controller
+        in your team's sumo robot.
+      </p>
+
+      <p>
+        Your response should:
+      </p>
+
+      <ul>
+        <li>
+          define the term microcontroller
+        </li>
+
+        <li>
+          identify the micro:bit's relevant inputs and outputs
+        </li>
+
+        <li>
+          explain how the processor runs the robot algorithm
+        </li>
+
+        <li>
+          explain the relationship between the micro:bit and Motor:bit board
+        </li>
+
+        <li>
+          explain why the motors require a separate motor driver
+        </li>
+
+        <li>
+          justify why the micro:bit V2 is suitable for the project
+        </li>
+
+        <li>
+          identify at least one limitation of the micro:bit
+        </li>
+
+        <li>
+          use specialist terminology accurately
+        </li>
+      </ul>
+
+      <a
+        class="assessment-link"
+        href="10_ComputingTechnologyA22026.pdf"
+        target="_blank"
+        rel="noopener"
+      >
         Open the full assessment task &nearrow;
-       </a>
-       <textarea data-save="l2p" placeholder="Complete or paste your assessment evidence here..."></textarea>
-      </div>
-      <div class="step">
-       <h4>
-        Exit ticket
-       </h4>
-       <p>
-        State one thing you can now explain or do, and one next step.
-       </p>
-       <textarea data-save="l2e"></textarea>
-      </div>
-     </div>
-     <div class="lesson-footer">
-      <label class="complete">
-       <input class="lesson-complete" data-lesson="2" type="checkbox"/>
-       Mark lesson complete
-      </label>
-     </div>
-    </section>
+      </a>
+
+      <textarea
+        data-save="l2p"
+        placeholder="Write your controller research and justification here..."
+      ></textarea>
+
+    </div>
+
+  </div>
+
+
+  <!-- LESSON COMPLETION -->
+
+  <div class="lesson-footer">
+
+    <label class="complete">
+
+      <input
+        class="lesson-complete"
+        data-lesson="2"
+        type="checkbox"
+      />
+
+      Mark lesson complete
+
+    </label>
+
+  </div>
+
+</section>
+
     <!-- =============================================================
   PANEL 3: Python editor and first program
  ============================================================= -->
