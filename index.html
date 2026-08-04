@@ -3174,248 +3174,1417 @@ while True:
   PANEL 4: Inputs, processes and outputs
  ============================================================= -->
     <!-- ==================== PANEL 4: Inputs, processes and outputs ==================== -->
-    <section class="panel" data-panel="4">
-     <span class="eyebrow">
-      Week 2 &middot; Lesson 4
-     </span>
-     <h2>
-      Inputs, processes and outputs
-     </h2>
-     <div class="syllabus-link">
-      <strong>
-       NESA syllabus connection
-      </strong>
-      <div class="syllabus-stage">
-       Stage 5 &middot; Building mechatronic and automated systems &middot; Identifying and defining
-      </div>
-      <p>
-       &bull; Describe inputs, storage, transmission, processes and outputs in mechatronic and automated systems
-      </p>
-     </div>
-     <div class="lesson-meta">
-      <span class="tag">
-       micro:bit V2
-      </span>
-      <span class="tag">
-       Sumo robot project
-      </span>
-     </div>
-     <div class="key-terms">
-      <h3>
-       Key terminology
-      </h3>
-      <dl>
-       <dt>
+  
+     <!-- =============================================================
+     PANEL 4: Inputs, processes and outputs
+============================================================= -->
+
+<section class="panel" data-panel="4">
+
+  <!-- LESSON HEADING -->
+
+  <span class="eyebrow">
+    Week 2 &middot; Lesson 4
+  </span>
+
+  <h2>
+    Inputs, processes and outputs
+  </h2>
+
+
+  <!-- NESA SYLLABUS CONNECTION -->
+
+  <div class="syllabus-link">
+
+    <strong>
+      NESA syllabus connection
+    </strong>
+
+    <div class="syllabus-stage">
+      Stage 5 &middot; Building mechatronic and automated systems
+      &middot; Identifying and defining
+    </div>
+
+    <p>
+      &bull; Describe inputs, storage, transmission, processes and
+      outputs in mechatronic and automated systems.
+    </p>
+
+  </div>
+
+
+  <!-- LESSON TAGS -->
+
+  <div class="lesson-meta">
+
+    <span class="tag">
+      Input–process–output
+    </span>
+
+    <span class="tag">
+      Sensors and actuators
+    </span>
+
+    <span class="tag">
+      Feedback systems
+    </span>
+
+    <span class="tag">
+      Sumo robot project
+    </span>
+
+  </div>
+
+
+  <!-- LEARNING INTENTIONS -->
+
+  <div class="callout">
+
+    <h3>
+      Learning intentions
+    </h3>
+
+    <p>
+      By the end of this lesson, you should be able to:
+    </p>
+
+    <ul>
+      <li>
+        classify components as inputs, processes, storage,
+        transmission or outputs
+      </li>
+
+      <li>
+        explain how information moves through the sumo robot
+      </li>
+
+      <li>
+        distinguish between sensors, controllers and actuators
+      </li>
+
+      <li>
+        explain how feedback allows an automated system to adjust
+        its behaviour
+      </li>
+
+      <li>
+        construct detailed IPO diagrams for the robot’s different
+        operating behaviours
+      </li>
+    </ul>
+
+  </div>
+
+
+  <!-- KEY TERMINOLOGY -->
+
+  <div class="key-terms">
+
+    <h3>
+      Key terminology
+    </h3>
+
+    <dl>
+
+      <dt>
+        Input
+      </dt>
+
+      <dd>
+        Data or an electrical signal received by a system from a
+        sensor, user or another device.
+      </dd>
+
+
+      <dt>
         Sensor
-       </dt>
-       <dd>
-        An input device that detects a physical condition and converts it into data or an electrical signal.
-       </dd>
-       <dt>
+      </dt>
+
+      <dd>
+        An input device that detects a physical condition and converts
+        it into data or an electrical signal.
+      </dd>
+
+
+      <dt>
+        Process
+      </dt>
+
+      <dd>
+        The calculations, comparisons and decisions performed by a
+        controller using programmed instructions.
+      </dd>
+
+
+      <dt>
+        Output
+      </dt>
+
+      <dd>
+        An action, signal or result produced by a system, such as
+        movement, light, sound or transmitted information.
+      </dd>
+
+
+      <dt>
         Actuator
-       </dt>
-       <dd>
-        An output device that converts electrical energy or a control signal into physical movement or action.
-       </dd>
-       <dt>
+      </dt>
+
+      <dd>
+        An output device that converts electrical energy or a control
+        signal into physical movement or another action.
+      </dd>
+
+
+      <dt>
+        Storage
+      </dt>
+
+      <dd>
+        The retention of program instructions or data so that they can
+        be used later by the system.
+      </dd>
+
+
+      <dt>
+        Transmission
+      </dt>
+
+      <dd>
+        The movement of data or electrical signals between components
+        within a system.
+      </dd>
+
+
+      <dt>
         Signal
-       </dt>
-       <dd>
-        A changing electrical or digital value used to carry information between components.
-       </dd>
-       <dt>
+      </dt>
+
+      <dd>
+        An electrical or digital value used to carry information
+        between components.
+      </dd>
+
+
+      <dt>
         Digital input
-       </dt>
-       <dd>
-        An input with discrete states, usually represented as 0 or 1, off or on.
-       </dd>
-       <dt>
+      </dt>
+
+      <dd>
+        An input with separate states, usually represented as 0 or 1,
+        off or on, or false or true.
+      </dd>
+
+
+      <dt>
         Analogue input
-       </dt>
-       <dd>
-        An input that can take a range of values to represent changing physical conditions.
-       </dd>
-       <dt>
+      </dt>
+
+      <dd>
+        An input that can contain a range of values representing a
+        changing physical condition.
+      </dd>
+
+
+      <dt>
         Feedback
-       </dt>
-       <dd>
-        Information about strengths, weaknesses and improvements provided after reviewing work or performance.
-       </dd>
-      </dl>
-     </div>
-     <div class="reading">
+      </dt>
+
+      <dd>
+        Information about the result of a system’s output that is used
+        to adjust its next action.
+      </dd>
+
+
+      <dt>
+        Feedback loop
+      </dt>
+
+      <dd>
+        A repeated cycle in which a system senses conditions, processes
+        the data, produces an output and then senses the result again.
+      </dd>
+
+    </dl>
+
+  </div>
+
+
+  <!-- READING CONTENT -->
+
+  <div class="reading">
+
+    <h3>
+      Read and understand
+    </h3>
+
+    <p>
+      Mechatronic systems collect information, make decisions and
+      produce physical actions. This can be represented using an
+      <strong>input–process–output</strong>, or IPO, model.
+    </p>
+
+    <p>
+      The IPO model helps designers understand how information moves
+      through a system. It can also help programmers identify which
+      sensors must be read, which decisions must be made and which
+      outputs must be controlled.
+    </p>
+
+
+    <h3>
+      Inputs
+    </h3>
+
+    <p>
+      Inputs provide the system with information. They may come from a
+      user, a sensor or another computer system.
+    </p>
+
+    <p>
+      In the sumo robot, the main inputs include:
+    </p>
+
+    <ul>
+      <li>
+        tracking sensors that detect the colour or reflectivity of the
+        surface
+      </li>
+
+      <li>
+        an ultrasonic sensor that measures the distance to an object
+      </li>
+
+      <li>
+        buttons used to start, stop or test the robot
+      </li>
+
+      <li>
+        stored settings such as motor speed and distance thresholds
+      </li>
+    </ul>
+
+    <p>
+      Sensors do not directly decide what the robot should do. They
+      provide readings that the micro:bit program must interpret.
+    </p>
+
+
+    <h3>
+      Processes
+    </h3>
+
+    <p>
+      Processing occurs when the micro:bit runs the programmed
+      algorithm. The processor may store values in variables, compare
+      readings with thresholds and select an action.
+    </p>
+
+    <p>
+      For example, the tracking sensor may return a value representing
+      a black or white surface. The program compares this value with a
+      condition and decides whether the robot should continue forward,
+      reverse or turn.
+    </p>
+
+    <p>
+      Processing can include:
+    </p>
+
+    <ul>
+      <li>
+        reading a sensor value
+      </li>
+
+      <li>
+        storing the value in a variable
+      </li>
+
+      <li>
+        comparing the value with a threshold
+      </li>
+
+      <li>
+        checking more than one condition
+      </li>
+
+      <li>
+        selecting an appropriate behaviour
+      </li>
+
+      <li>
+        calculating motor speed or direction
+      </li>
+    </ul>
+
+
+    <h3>
+      Outputs
+    </h3>
+
+    <p>
+      Outputs are the actions or information produced by the system.
+      In the sumo robot, the most important outputs are the control
+      signals sent to the Motor:bit board.
+    </p>
+
+    <p>
+      The Motor:bit then controls the direction and speed of the two
+      DC motors. The motors are actuators because they convert
+      electrical energy into movement.
+    </p>
+
+    <p>
+      Other possible outputs include:
+    </p>
+
+    <ul>
+      <li>
+        images displayed on the micro:bit LED matrix
+      </li>
+
+      <li>
+        sounds from the micro:bit speaker
+      </li>
+
+      <li>
+        diagnostic information sent through the serial connection
+      </li>
+
+      <li>
+        radio messages sent to another micro:bit
+      </li>
+    </ul>
+
+
+    <h3>
+      Storage and transmission
+    </h3>
+
+    <p>
+      The syllabus model also includes storage and transmission.
+      Storage occurs when the micro:bit keeps program instructions,
+      variables or settings in memory.
+    </p>
+
+    <p>
+      For example, the program may store:
+    </p>
+
+    <ul>
+      <li>
+        the current distance reading
+      </li>
+
+      <li>
+        whether an edge has been detected
+      </li>
+
+      <li>
+        the current operating mode
+      </li>
+
+      <li>
+        the selected motor speeds
+      </li>
+
+      <li>
+        threshold values used to interpret sensors
+      </li>
+    </ul>
+
+    <p>
+      Transmission occurs whenever data or control signals move between
+      components. A sensor transmits a reading to the micro:bit, and the
+      micro:bit transmits control signals to the Motor:bit board.
+    </p>
+
+
+    <h3>
+      Feedback systems
+    </h3>
+
+    <p>
+      A simple system may produce one output and then stop. An
+      autonomous robot must continually sense and respond to changing
+      conditions.
+    </p>
+
+    <p>
+      This repeated process is called a <strong>feedback loop</strong>.
+      After the robot moves, its sensors collect new information. The
+      program processes the new readings and adjusts the next motor
+      command.
+    </p>
+
+    <p>
+      Without feedback, the robot would continue performing the same
+      action even when the environment changed.
+    </p>
+
+    <p>
+      For example, a robot programmed to move forward without checking
+      its tracking sensors would eventually drive outside the sumo
+      ring. Feedback allows the system to detect the boundary and
+      change direction.
+    </p>
+
+  </div>
+
+
+  <!-- VISUAL IPO MODEL -->
+
+  <div class="visual">
+
+    <h3>
+      Visual guide: information flow through the sumo robot
+    </h3>
+
+    <svg
+      viewBox="0 0 1040 360"
+      role="img"
+      aria-labelledby="lesson4DiagramTitle lesson4DiagramDescription"
+    >
+
+      <title id="lesson4DiagramTitle">
+        Input process output and feedback diagram for a sumo robot
+      </title>
+
+      <desc id="lesson4DiagramDescription">
+        Sensors provide inputs to the microbit. The microbit processes
+        the data and sends control signals through the Motorbit board
+        to the motors. New sensor readings provide feedback.
+      </desc>
+
+      <defs>
+
+        <marker
+          id="lesson4Arrow"
+          markerWidth="10"
+          markerHeight="10"
+          refX="9"
+          refY="3"
+          orient="auto"
+        >
+          <path
+            d="M0,0 L0,6 L9,3 z"
+            fill="#607080"
+          />
+        </marker>
+
+      </defs>
+
+
+      <!-- INPUT -->
+
+      <rect
+        x="30"
+        y="75"
+        width="205"
+        height="150"
+        rx="18"
+        fill="#eaf3fb"
+        stroke="#1f5f99"
+        stroke-width="4"
+      />
+
+      <text
+        x="132"
+        y="115"
+        text-anchor="middle"
+        font-size="28"
+        font-weight="700"
+      >
+        INPUT
+      </text>
+
+      <text
+        x="132"
+        y="152"
+        text-anchor="middle"
+        font-size="18"
+      >
+        Tracking sensor
+      </text>
+
+      <text
+        x="132"
+        y="179"
+        text-anchor="middle"
+        font-size="18"
+      >
+        Ultrasonic sensor
+      </text>
+
+      <text
+        x="132"
+        y="206"
+        text-anchor="middle"
+        font-size="18"
+      >
+        Buttons
+      </text>
+
+
+      <!-- PROCESS -->
+
+      <rect
+        x="300"
+        y="75"
+        width="210"
+        height="150"
+        rx="18"
+        fill="#eaf6ee"
+        stroke="#0f6f3d"
+        stroke-width="4"
+      />
+
+      <text
+        x="405"
+        y="115"
+        text-anchor="middle"
+        font-size="28"
+        font-weight="700"
+      >
+        PROCESS
+      </text>
+
+      <text
+        x="405"
+        y="152"
+        text-anchor="middle"
+        font-size="18"
+      >
+        Read values
+      </text>
+
+      <text
+        x="405"
+        y="179"
+        text-anchor="middle"
+        font-size="18"
+      >
+        Test conditions
+      </text>
+
+      <text
+        x="405"
+        y="206"
+        text-anchor="middle"
+        font-size="18"
+      >
+        Select behaviour
+      </text>
+
+
+      <!-- TRANSMISSION -->
+
+      <rect
+        x="575"
+        y="75"
+        width="190"
+        height="150"
+        rx="18"
+        fill="#fff6df"
+        stroke="#9a6a00"
+        stroke-width="4"
+      />
+
+      <text
+        x="670"
+        y="113"
+        text-anchor="middle"
+        font-size="24"
+        font-weight="700"
+      >
+        TRANSMISSION
+      </text>
+
+      <text
+        x="670"
+        y="152"
+        text-anchor="middle"
+        font-size="18"
+      >
+        Control signals
+      </text>
+
+      <text
+        x="670"
+        y="179"
+        text-anchor="middle"
+        font-size="18"
+      >
+        sent to Motor:bit
+      </text>
+
+      <text
+        x="670"
+        y="206"
+        text-anchor="middle"
+        font-size="18"
+      >
+        through connections
+      </text>
+
+
+      <!-- OUTPUT -->
+
+      <rect
+        x="830"
+        y="75"
+        width="180"
+        height="150"
+        rx="18"
+        fill="#f8e9ec"
+        stroke="#a71930"
+        stroke-width="4"
+      />
+
+      <text
+        x="920"
+        y="115"
+        text-anchor="middle"
+        font-size="28"
+        font-weight="700"
+      >
+        OUTPUT
+      </text>
+
+      <text
+        x="920"
+        y="152"
+        text-anchor="middle"
+        font-size="18"
+      >
+        Motors turn
+      </text>
+
+      <text
+        x="920"
+        y="179"
+        text-anchor="middle"
+        font-size="18"
+      >
+        Robot moves
+      </text>
+
+      <text
+        x="920"
+        y="206"
+        text-anchor="middle"
+        font-size="18"
+      >
+        Direction changes
+      </text>
+
+
+      <!-- MAIN ARROWS -->
+
+      <line
+        x1="235"
+        y1="150"
+        x2="295"
+        y2="150"
+        stroke="#607080"
+        stroke-width="4"
+        marker-end="url(#lesson4Arrow)"
+      />
+
+      <line
+        x1="510"
+        y1="150"
+        x2="570"
+        y2="150"
+        stroke="#607080"
+        stroke-width="4"
+        marker-end="url(#lesson4Arrow)"
+      />
+
+      <line
+        x1="765"
+        y1="150"
+        x2="825"
+        y2="150"
+        stroke="#607080"
+        stroke-width="4"
+        marker-end="url(#lesson4Arrow)"
+      />
+
+
+      <!-- FEEDBACK LOOP -->
+
+      <path
+        d="M920 235 C920 325,132 325,132 235"
+        fill="none"
+        stroke="#607080"
+        stroke-width="4"
+        marker-end="url(#lesson4Arrow)"
+      />
+
+      <text
+        x="520"
+        y="315"
+        text-anchor="middle"
+        font-size="22"
+        font-weight="700"
+        fill="#607080"
+      >
+        FEEDBACK: sensors measure the changed environment again
+      </text>
+
+    </svg>
+
+  </div>
+
+
+  <!-- STACKED ACTIVITIES -->
+
+  <div class="sequence">
+
+
+    <!-- ACTIVITY 1 -->
+
+    <div class="activity-card">
+
       <h3>
-       Read and understand
+        Activity 1: Classify the robot components
       </h3>
+
       <p>
-       Sensors convert physical conditions into electrical signals that a controller can read. The tracking module senses the floor and the ultrasonic sensor estimates the distance to an object.
+        Classify each component as an input, process, storage,
+        transmission or output component.
       </p>
+
+      <ul>
+        <li>
+          tracking sensor
+        </li>
+
+        <li>
+          ultrasonic sensor
+        </li>
+
+        <li>
+          micro:bit processor
+        </li>
+
+        <li>
+          variables stored in memory
+        </li>
+
+        <li>
+          wires connecting the micro:bit and Motor:bit
+        </li>
+
+        <li>
+          Motor:bit control signals
+        </li>
+
+        <li>
+          left and right motors
+        </li>
+
+        <li>
+          LED display
+        </li>
+      </ul>
+
       <p>
-       The controller processes sensor values using conditions and variables. It then sends commands to actuators such as motors, which create physical movement.
+        Explain the reason for each classification. Some components may
+        contribute to more than one category.
       </p>
+
+      <textarea
+        data-save="l4a1"
+        placeholder="Component:
+
+Classification:
+
+Reason:
+
+How it connects to another part of the system:"
+      ></textarea>
+
+    </div>
+
+
+    <!-- ACTIVITY 2 -->
+
+    <div class="activity-card">
+
+      <h3>
+        Activity 2: Construct an IPO model for edge detection
+      </h3>
+
       <p>
-       A feedback system repeatedly measures the environment and adjusts its output. The sumo robot uses feedback because its next movement depends on continually changing sensor readings.
+        Construct a detailed IPO model explaining how the robot responds
+        when a tracking sensor detects the white boundary of the sumo
+        ring.
       </p>
-     </div>
-     <div class="sequence">
-      <div class="step">
-       <h4>
-        Starter
-       </h4>
-       <p>
-        Write one prediction, connection or question about today&rsquo;s topic.
-       </p>
-       <textarea data-save="l4s"></textarea>
-      </div>
-      <div class="step">
-       <h4>
-        Learning activities
-       </h4>
-       <div class="activity-grid">
-        <div class="activity-card">
-         <h4>
-          Activity 1
-         </h4>
-         <p>
-          Complete an IPO table for the sumo robot.
-         </p>
-         <textarea data-save="l4a1" placeholder="Record your response, evidence or test results..."></textarea>
-        </div>
-        <div class="activity-card">
-         <h4>
-          Activity 2
-         </h4>
-         <p>
-          Identify sensors, processor and actuators.
-         </p>
-         <textarea data-save="l4a2" placeholder="Record your response, evidence or test results..."></textarea>
-        </div>
-        <div class="activity-card">
-         <h4>
-          Activity 3
-         </h4>
-         <p>
-          Explain why a repeated feedback loop is needed.
-         </p>
-         <textarea data-save="l4a3" placeholder="Record your response, evidence or test results..."></textarea>
-        </div>
-       </div>
-      </div>
-      <div class="deep-activity">
-       <h4>
-        Interactive investigation
-       </h4>
-       <p>
-        Apply the lesson concepts before completing your assessment milestone.
-       </p>
-       <div class="interactive-grid">
-        <div class="interactive-card quick-check" data-correct="1">
-         <strong>
-          Quick check
-         </strong>
-         <p>
-          Which is an output in the sumo robot?
-         </p>
-         <select data-save="l4interactiveSelect">
-          <option value="">
-           Choose an answer&hellip;
-          </option>
-          <option value="0">
-           Ultrasonic distance reading
-          </option>
-          <option value="1">
-           Motor movement
-          </option>
-          <option value="2">
-           Line-sensor value
-          </option>
-         </select>
-         <p aria-live="polite" class="feedback">
-         </p>
-        </div>
-        <div class="interactive-card sort-challenge">
-         <strong>
-          Drag-and-drop sequence
-         </strong>
-         <p>
-          Sort the robot's information flow into sequence.
-         </p>
-         <p class="challenge-note">
-          Drag the steps into the correct order, then check your sequence.
-         </p>
-         <ul class="sort-list" data-save-order="l4sort">
-          <li class="sort-item" data-step="2" draggable="true">
-           Program selects an escape behaviour
-          </li>
-          <li class="sort-item" data-step="3" draggable="true">
-           Motors reverse and turn
-          </li>
-          <li class="sort-item" data-step="1" draggable="true">
-           micro:bit compares the reading with a threshold
-          </li>
-          <li class="sort-item" data-step="0" draggable="true">
-           Tracking sensor reads the floor
-          </li>
-         </ul>
-         <div class="sort-controls">
-          <button class="mini-btn check-order" type="button">
-           Check order
-          </button>
-          <button class="mini-btn secondary reset-order" type="button">
-           Shuffle
-          </button>
-         </div>
-         <p aria-live="polite" class="feedback order-feedback">
-         </p>
-        </div>
-       </div>
-       <div class="interactive-card" style="margin-top:14px">
+
+      <p>
+        Include:
+      </p>
+
+      <ol>
+        <li>
+          the physical condition being detected
+        </li>
+
+        <li>
+          the value produced by the sensor
+        </li>
+
+        <li>
+          how the value reaches the micro:bit
+        </li>
+
+        <li>
+          the condition tested by the program
+        </li>
+
+        <li>
+          the escape behaviour selected
+        </li>
+
+        <li>
+          the signals sent to the Motor:bit
+        </li>
+
+        <li>
+          the resulting motor movement
+        </li>
+
+        <li>
+          how feedback continues after the robot moves
+        </li>
+      </ol>
+
+      <textarea
+        data-save="l4a2"
+        placeholder="Input:
+
+Transmission to controller:
+
+Processing:
+
+Output:
+
+Feedback:"
+      ></textarea>
+
+    </div>
+
+
+    <!-- ACTIVITY 3 -->
+
+    <div class="activity-card">
+
+      <h3>
+        Activity 3: Compare two robot behaviours
+      </h3>
+
+      <p>
+        Compare the information flow used during:
+      </p>
+
+      <ul>
+        <li>
+          line-following mode
+        </li>
+
+        <li>
+          sumo attack mode
+        </li>
+      </ul>
+
+      <p>
+        For each behaviour, identify the main input, processing
+        decision and output. Explain what is similar and what is
+        different.
+      </p>
+
+      <textarea
+        data-save="l4a3"
+        placeholder="Line-following mode:
+
+Inputs:
+
+Processing:
+
+Outputs:
+
+Sumo attack mode:
+
+Inputs:
+
+Processing:
+
+Outputs:
+
+Similarities and differences:"
+      ></textarea>
+
+    </div>
+
+
+    <!-- ACTIVITY 4 -->
+
+    <div class="activity-card">
+
+      <h3>
+        Activity 4: Analyse a system failure
+      </h3>
+
+      <p>
+        A robot reaches the white boundary but continues driving
+        forward. Identify at least four possible causes of the failure.
+      </p>
+
+      <p>
+        Consider problems involving:
+      </p>
+
+      <ul>
+        <li>
+          input or sensor readings
+        </li>
+
+        <li>
+          transmission or wiring
+        </li>
+
+        <li>
+          processing or program logic
+        </li>
+
+        <li>
+          output signals
+        </li>
+
+        <li>
+          motors or power
+        </li>
+      </ul>
+
+      <p>
+        For each possible cause, describe a test that could help locate
+        the problem.
+      </p>
+
+      <textarea
+        data-save="l4a4"
+        placeholder="Possible cause 1:
+
+Test:
+
+Possible cause 2:
+
+Test:
+
+Possible cause 3:
+
+Test:
+
+Possible cause 4:
+
+Test:"
+      ></textarea>
+
+    </div>
+
+
+    <!-- INTERACTIVE QUICK CHECK -->
+
+    <div class="deep-activity">
+
+      <h3>
+        Interactive activity 5: IPO knowledge check
+      </h3>
+
+      <div
+        class="interactive-card quick-check"
+        data-correct="1"
+      >
+
         <strong>
-         In-depth application
+          Question 1
         </strong>
+
         <p>
-         Construct a detailed IPO diagram for line following and a second IPO diagram for sumo mode. Identify any stored values and feedback loops.
+          Which component is an actuator in the sumo robot?
         </p>
-        <textarea data-save="l4deep" placeholder="Record your planning, evidence, results and conclusions here..."></textarea>
-       </div>
+
+        <select data-save="l4interactiveSelect">
+
+          <option value="">
+            Choose an answer&hellip;
+          </option>
+
+          <option value="0">
+            Ultrasonic sensor
+          </option>
+
+          <option value="1">
+            DC motor
+          </option>
+
+          <option value="2">
+            Tracking sensor
+          </option>
+
+        </select>
+
+        <p
+          class="feedback"
+          aria-live="polite"
+        ></p>
+
       </div>
-      <div class="step project-milestone">
-       <h4>
+
+
+      <div
+        class="interactive-card quick-check"
+        data-correct="2"
+        style="margin-top: 14px;"
+      >
+
+        <strong>
+          Question 2
+        </strong>
+
+        <p>
+          Which statement best explains feedback in the sumo robot?
+        </p>
+
+        <select data-save="l4interactiveSelect2">
+
+          <option value="">
+            Choose an answer&hellip;
+          </option>
+
+          <option value="0">
+            The robot performs one movement and then stops sensing
+          </option>
+
+          <option value="1">
+            The motors send the program directly to the sensors
+          </option>
+
+          <option value="2">
+            The robot senses the result of its movement and uses new
+            readings to select its next action
+          </option>
+
+        </select>
+
+        <p
+          class="feedback"
+          aria-live="polite"
+        ></p>
+
+      </div>
+
+    </div>
+
+
+    <!-- DRAG AND DROP -->
+
+    <div class="deep-activity">
+
+      <h3>
+        Interactive activity 6: Sequence the feedback loop
+      </h3>
+
+      <p>
+        Drag the steps into the order used when the robot detects the
+        edge of the ring.
+      </p>
+
+      <div class="interactive-card sort-challenge">
+
+        <ul
+          class="sort-list"
+          data-save-order="l4sort"
+        >
+
+          <li
+            class="sort-item"
+            data-step="3"
+            draggable="true"
+          >
+            The micro:bit sends an escape command to the Motor:bit
+          </li>
+
+          <li
+            class="sort-item"
+            data-step="0"
+            draggable="true"
+          >
+            The tracking sensor reads the floor surface
+          </li>
+
+          <li
+            class="sort-item"
+            data-step="5"
+            draggable="true"
+          >
+            The sensors collect new readings after the robot moves
+          </li>
+
+          <li
+            class="sort-item"
+            data-step="2"
+            draggable="true"
+          >
+            The program compares the reading with the edge condition
+          </li>
+
+          <li
+            class="sort-item"
+            data-step="4"
+            draggable="true"
+          >
+            The motors reverse and turn the robot
+          </li>
+
+          <li
+            class="sort-item"
+            data-step="1"
+            draggable="true"
+          >
+            The sensor signal is transmitted to the micro:bit
+          </li>
+
+        </ul>
+
+        <div class="sort-controls">
+
+          <button
+            class="mini-btn check-order"
+            type="button"
+          >
+            Check order
+          </button>
+
+          <button
+            class="mini-btn secondary reset-order"
+            type="button"
+          >
+            Shuffle
+          </button>
+
+        </div>
+
+        <p
+          class="feedback order-feedback"
+          aria-live="polite"
+        ></p>
+
+      </div>
+
+    </div>
+
+
+    <!-- ACTIVITY 7 -->
+
+    <div class="activity-card">
+
+      <h3>
+        Activity 7: Design a feedback system
+      </h3>
+
+      <p>
+        Imagine the robot only checks its tracking sensors once every
+        five seconds.
+      </p>
+
+      <p>
+        Explain how this would affect:
+      </p>
+
+      <ul>
+        <li>
+          response time
+        </li>
+
+        <li>
+          accuracy
+        </li>
+
+        <li>
+          reliability
+        </li>
+
+        <li>
+          the risk of leaving the arena
+        </li>
+      </ul>
+
+      <p>
+        Propose a better approach and explain why it would improve the
+        system.
+      </p>
+
+      <textarea
+        data-save="l4deep"
+        placeholder="Likely problems:
+
+Effect on robot performance:
+
+Improved approach:
+
+Reason the improved approach would work:"
+      ></textarea>
+
+    </div>
+
+
+    <!-- CHECK YOUR UNDERSTANDING -->
+
+    <div class="step">
+
+      <h3>
+        Check your understanding
+      </h3>
+
+      <p>
+        Answer each question using complete sentences and specialist
+        terminology.
+      </p>
+
+
+      <h4>
+        1. What is the difference between a sensor and an actuator?
+      </h4>
+
+      <textarea data-save="l4q1"></textarea>
+
+
+      <h4>
+        2. Explain the role of the micro:bit in the processing stage.
+      </h4>
+
+      <textarea data-save="l4q2"></textarea>
+
+
+      <h4>
+        3. Give one example of storage and one example of transmission
+        in the sumo robot.
+      </h4>
+
+      <textarea data-save="l4q3"></textarea>
+
+
+      <h4>
+        4. Why is the sumo robot described as a feedback system?
+      </h4>
+
+      <textarea data-save="l4q4"></textarea>
+
+
+      <h4>
+        5. Explain how an incorrect input reading could produce an
+        incorrect output.
+      </h4>
+
+      <textarea data-save="l4q5"></textarea>
+
+    </div>
+
+
+    <!-- ASSESSMENT MILESTONE -->
+
+    <div class="step project-milestone">
+
+      <h3>
         Assessment milestone 4: System IPO diagram
-       </h4>
-       <p class="deliverable">
-        Create an input&ndash;process&ndash;output diagram for the complete sumo robot.
-       </p>
-       <ul>
+      </h3>
+
+      <p class="deliverable">
+        Create a detailed input–process–output diagram for the complete
+        sumo robot.
+      </p>
+
+      <p>
+        Your diagram and explanation should:
+      </p>
+
+      <ul>
         <li>
-         Include the tracking sensor, ultrasonic sensor, micro:bit, Motor:bit and motors.
+          include the tracking sensor and ultrasonic sensor as inputs
         </li>
+
         <li>
-         Show feedback loops where appropriate.
+          show how sensor data is transmitted to the micro:bit
         </li>
-       </ul>
-       <a class="assessment-link" href="10_ComputingTechnologyA22026.pdf" rel="noopener" target="_blank">
+
+        <li>
+          identify the micro:bit and its program as the processing stage
+        </li>
+
+        <li>
+          identify variables or settings stored in memory
+        </li>
+
+        <li>
+          show control signals being transmitted to the Motor:bit
+        </li>
+
+        <li>
+          identify the motors and robot movement as outputs
+        </li>
+
+        <li>
+          include a feedback loop returning from the changed
+          environment to the sensors
+        </li>
+
+        <li>
+          use arrows and labels to clearly show the direction of
+          information flow
+        </li>
+      </ul>
+
+      <a
+        class="assessment-link"
+        href="10_ComputingTechnologyA22026.pdf"
+        target="_blank"
+        rel="noopener"
+      >
         Open the full assessment task &nearrow;
-       </a>
-       <textarea data-save="l4p" placeholder="Complete or paste your assessment evidence here..."></textarea>
-      </div>
-      <div class="step">
-       <h4>
-        Exit ticket
-       </h4>
-       <p>
-        State one thing you can now explain or do, and one next step.
-       </p>
-       <textarea data-save="l4e"></textarea>
-      </div>
-     </div>
-     <div class="lesson-footer">
-      <label class="complete">
-       <input class="lesson-complete" data-lesson="4" type="checkbox"/>
-       Mark lesson complete
-      </label>
-     </div>
-    </section>
+      </a>
+
+      <textarea
+        data-save="l4p"
+        placeholder="Describe your IPO diagram or paste your assessment evidence here..."
+      ></textarea>
+
+    </div>
+
+  </div>
+
+
+  <!-- LESSON COMPLETION -->
+
+  <div class="lesson-footer">
+
+    <label class="complete">
+
+      <input
+        class="lesson-complete"
+        data-lesson="4"
+        type="checkbox"
+      />
+
+      Mark lesson complete
+
+    </label>
+
+  </div>
+
+</section>
     <!-- =============================================================
   PANEL 5: Variables and data types
  ============================================================= -->
